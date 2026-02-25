@@ -14,11 +14,8 @@ export default function EventList() {
     try {
       setLoading(true);
       setErr(null);
-
-      // ✅ Get token from localStorage (after login)
+      
       const token = localStorage.getItem("token");
-
-      // ✅ Include token in request headers
       const res = await axios.get(`${API_URL}/events`, {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -36,7 +33,7 @@ export default function EventList() {
 
   useEffect(() => {
     fetchEvents();
-    const timer = setInterval(fetchEvents, 10000);
+    const timer = setInterval(fetchEvents, 10000); // refresh every 10s
     return () => clearInterval(timer);
   }, []);
 
