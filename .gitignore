@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.pkl
+*.env
+venv/
+node_modules/
+.env
+storage/

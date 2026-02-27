@@ -1,0 +1,10 @@
+{
+  "camera_id": "cam1",
+  "event_type": "melee",
+  "confidence": 0.9,
+  "start_time": "2025-10-10T10:00:00Z",
+  "end_time": "2025-10-10T10:00:10Z",
+  "clip_path": "storage/test.mp4",
+  "enc_path": "storage/test.mp4.enc",
+  "hash": "b2b5fbd01f0d7b0a541e9cb33fba62f30887b6edc902ccf1a4dbe6a65c9dc571"
+}
