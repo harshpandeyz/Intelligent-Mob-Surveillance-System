@@ -1,44 +1,56 @@
-# Criminal Activity Detection using CCTV with Blockchain-Based Security
+# Intelligent Mob Surveillance System using AI and Blockchain
 
-AI-powered CCTV surveillance system that detects criminal activities in real-time, encrypts evidence, and stores tamper-proof hashes on blockchain.
+An AI-powered intelligent CCTV surveillance framework designed to automatically detect suspicious criminal activities in real-time and ensure tamper-proof storage of digital evidence using blockchain-based cryptographic security.
+
+---
 
 ## Problem Statement
 
-Traditional CCTV systems rely on manual monitoring and lack secure evidence storage. Video footage can be altered or deleted, compromising investigations.
+Traditional CCTV surveillance systems depend on continuous human monitoring and utilize centralized storage mechanisms where recorded video evidence can be modified, deleted, or tampered with. This compromises the reliability of digital forensic evidence during legal investigations.
 
-This project automates crime detection using AI and ensures evidence integrity using blockchain technology.
+The proposed Intelligent Mob Surveillance System (IMS) integrates Artificial Intelligence with Blockchain technology to automate criminal activity detection and ensure the integrity, confidentiality, and authenticity of surveillance evidence.
+
+---
 
 ## Key Features
 
-- Real-time CCTV monitoring
-- AI-based criminal activity detection (YOLOv8)
-- Video clip extraction and encryption (AES-256)
-- Blockchain-based hash storage
-- Tamper-proof evidence verification
-- Secure dashboard with authentication
+- Real-time CCTV monitoring  
+- AI-based mob/criminal activity detection (YOLOv8)  
+- Suspicious event-triggered video clip extraction  
+- AES-256 encryption of extracted evidence  
+- SHA-256 hash generation for integrity verification  
+- Blockchain-based immutable hash logging  
+- Tamper-proof evidence verification  
+- Secure monitoring dashboard with authentication  
+
+---
 
 ## System Architecture
 
 CCTV Camera  
 ↓  
-AI Detection Module  
+AI Detection Module (YOLOv8)  
+↓  
+Suspicious Activity Detection  
 ↓  
 Video Clip Extraction  
 ↓  
-AES Encryption  
+AES-256 Encryption  
 ↓  
 SHA-256 Hash Generation  
 ↓  
-Blockchain Logging  
+Ethereum Blockchain Logging  
 ↓  
-Dashboard & Evidence Verification
+Monitoring Dashboard & Evidence Verification  
+
+---
 
 ## Technology Stack
 
-### AI & ML
+### AI & Computer Vision
 - YOLOv8
-- MediaPipe
 - OpenCV
+- MediaPipe
 
 ### Backend
 - Python
@@ -55,60 +67,6 @@ Dashboard & Evidence Verification
 - React
 - Vite
 
+---
+
 ## Project Structure
-
-CCTV-AI-Blockchain/
-├── backend/
-├── ai/
-├── frontend/
-├── contracts/
-├── storage/
-├── docs/
-├── .env
-└── README.md
-
-## Setup Instructions
-
-### 1. Clone Repository
-git clone https://github.com/Aanshtiwari/CCTV-AI-Blockchain.git
-cd CCTV-AI-Blockchain
-
-### 2. Backend Setup
-python -m venv venv
-source venv/Scripts/activate
-pip install -r requirements.txt
-uvicorn backend.main:app --reload
-
-### 3. Blockchain Setup
-- Start Ganache
-- Deploy smart contract
-
-### 4. AI Detection
-python ai/detect_and_send.py
-
-### 5. Frontend Setup
-cd frontend
-npm install
-npm run dev
-
-## Authentication Flow
-
-- User logs in
-- JWT token generated
-- Token used for secured API calls
-- Role-based access enforced
-
-## Evidence Verification
-
-1. Encrypted clip hash generated
-2. Hash stored on blockchain
-3. Investigator recalculates hash
-4. Hash matched with blockchain record
-
-## Future Enhancements
-
-- Multi-camera RTSP support
-- Facial recognition
-- Cloud deployment
-- SMS/Email alerts
-- Permissioned blockchain
