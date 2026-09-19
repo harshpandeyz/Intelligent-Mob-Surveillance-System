@@ -1,72 +1,197 @@
-# Intelligent Mob Surveillance System using AI and Blockchain
+# 🚨 Intelligent Mob Surveillance System
 
-An AI-powered intelligent CCTV surveillance framework designed to automatically detect suspicious criminal activities in real-time and ensure tamper-proof storage of digital evidence using blockchain-based cryptographic security.
+### AI-Powered CCTV Surveillance with Blockchain-Secured Digital Evidence
 
----
-
-## Problem Statement
-
-Traditional CCTV surveillance systems depend on continuous human monitoring and utilize centralized storage mechanisms where recorded video evidence can be modified, deleted, or tampered with. This compromises the reliability of digital forensic evidence during legal investigations.
-
-The proposed Intelligent Mob Surveillance System (IMS) integrates Artificial Intelligence with Blockchain technology to automate criminal activity detection and ensure the integrity, confidentiality, and authenticity of surveillance evidence.
+An intelligent surveillance framework that uses **YOLOv8** to detect suspicious activities in real time and combines **AES-256, SHA-256, and Ethereum Blockchain** to protect and verify digital evidence.
 
 ---
 
-## Key Features
+## ✨ Features
 
-- Real-time CCTV monitoring  
-- AI-based mob/criminal activity detection (YOLOv8)  
-- Suspicious event-triggered video clip extraction  
-- AES-256 encryption of extracted evidence  
-- SHA-256 hash generation for integrity verification  
-- Blockchain-based immutable hash logging  
-- Tamper-proof evidence verification  
-- Secure monitoring dashboard with authentication  
-
----
-
-## System Architecture
-
-CCTV Camera  
-↓  
-AI Detection Module (YOLOv8)  
-↓  
-Suspicious Activity Detection  
-↓  
-Video Clip Extraction  
-↓  
-AES-256 Encryption  
-↓  
-SHA-256 Hash Generation  
-↓  
-Ethereum Blockchain Logging  
-↓  
-Monitoring Dashboard & Evidence Verification  
+| Feature                    | Technology          |
+| -------------------------- | ------------------- |
+| 🎥 Real-time surveillance  | OpenCV              |
+| 🤖 Activity detection      | YOLOv8              |
+| 📹 Evidence extraction     | OpenCV              |
+| 🔐 Evidence encryption     | AES-256             |
+| #️⃣ Integrity verification | SHA-256             |
+| ⛓️ Immutable hash logging  | Ethereum + Solidity |
+| 🗄️ Metadata storage       | MongoDB             |
+| 🔑 Authentication          | JWT                 |
+| 🖥️ Monitoring dashboard   | React + Vite        |
 
 ---
 
-## Technology Stack
+## 🏗️ System Architecture
 
-### AI & Computer Vision
-- YOLOv8
-- OpenCV
-- MediaPipe
+```mermaid
+flowchart LR
+    A[📹 CCTV Camera] --> B[🤖 YOLOv8 AI Detection]
+    B --> C{Suspicious Activity?}
+
+    C -->|No| B
+    C -->|Yes| D[🎞️ Extract Video Clip]
+
+    D --> E[🔐 AES-256 Encryption]
+    E --> F[#️⃣ SHA-256 Hash]
+
+    F --> G[⛓️ Ethereum Blockchain]
+    E --> H[(🗄️ Secure Storage)]
+    F --> I[(🍃 MongoDB)]
+
+    G --> J[🖥️ React Dashboard]
+    H --> J
+    I --> J
+
+    J --> K[✅ Evidence Verification]
+    K --> F
+```
+
+---
+
+## 🔄 Evidence Security Flow
+
+```mermaid
+flowchart TD
+    A[Raw CCTV Footage] --> B[AI Detection]
+    B --> C[Suspicious Event]
+    C --> D[Video Clip Extraction]
+    D --> E[AES-256 Encryption]
+    E --> F[SHA-256 Hash Generation]
+    F --> G[Blockchain Registration]
+    G --> H[Evidence Verification]
+
+    H --> I{Hash Match?}
+    I -->|Yes| J[✅ Evidence Verified]
+    I -->|No| K[⚠️ Evidence Modified]
+```
+
+---
+
+## 🧠 How It Works
+
+```text
+CCTV
+  ↓
+YOLOv8 Detection
+  ↓
+Suspicious Activity
+  ↓
+Video Extraction
+  ↓
+AES-256 Encryption
+  ↓
+SHA-256 Hash
+  ↓
+Ethereum Blockchain
+  ↓
+Verification Dashboard
+```
+
+The **video is stored off-chain**, while its SHA-256 hash is recorded on the blockchain. During verification, the evidence is hashed again and compared with the blockchain record.
+
+---
+
+## 🛠️ Tech Stack
+
+```text
+AI              → YOLOv8 • OpenCV • MediaPipe
+Backend         → Python • FastAPI • MongoDB
+Blockchain      → Ethereum • Solidity • Ganache • Web3.py
+Frontend        → React • Vite
+Security        → AES-256 • SHA-256 • JWT
+```
+
+---
+
+## 📁 Project Structure
+
+```text
+intelligent-surveillance-system/
+│
+├── backend/           # FastAPI backend & AI processing
+├── frontend/          # React dashboard
+├── smart-contracts/   # Solidity contracts
+├── models/            # AI models
+├── storage/           # Encrypted evidence
+├── scripts/           # Utility & deployment scripts
+├── docker-compose.prod.yml
+└── README.md
+```
+
+---
+
+## 🚀 Quick Start
+
+### Clone
+
+```bash
+git clone https://github.com/harshpandeyz/intelligent-surveillance-system-v2.git
+cd intelligent-surveillance-system-v2
+```
 
 ### Backend
-- Python
-- FastAPI
-- MongoDB
-- JWT Authentication
 
-### Blockchain
-- Ethereum (Ganache)
-- Solidity
-- Web3.py
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r backend/requirements.txt
+```
 
 ### Frontend
-- React
-- Vite
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### Docker
+
+```bash
+docker compose -f docker-compose.prod.yml up -d
+```
 
 ---
 
-## Project Structure
+## 🔐 Security Model
+
+```mermaid
+flowchart LR
+    A[Evidence] --> B[AES-256]
+    B --> C[Encrypted Storage]
+    B --> D[SHA-256]
+    D --> E[Blockchain]
+    E --> F[Verification]
+```
+
+**Confidentiality** → AES-256
+**Integrity** → SHA-256
+**Immutable Record** → Ethereum
+**Authentication** → JWT
+
+---
+
+## 🎯 Applications
+
+* 🏙️ Smart-city surveillance
+* 🎓 Campus security
+* 🏭 Industrial security
+* 🚉 Public-space monitoring
+* ⚖️ Digital evidence verification
+
+---
+
+## 👨‍💻 Author
+
+**Harsh Pandey**
+B.Tech Information Technology — MIT ADT University, Pune
+
+[GitHub](https://github.com/harshpandeyz)
+
+---
+
+<p align="center">
+  <b>AI Detection × Cryptography × Blockchain</b><br>
+  Building a more intelligent and verifiable surveillance system.
+</p>
