@@ -3,7 +3,6 @@
 ### AI-Powered CCTV Surveillance with Blockchain-Secured Digital Evidence
 
 An intelligent surveillance framework that uses **YOLOv8** to detect suspicious activities in real time and combines **AES-256, SHA-256, and Ethereum Blockchain** to protect and verify digital evidence.
-
 ---
 
 ## ✨ Features
